@@ -11,7 +11,7 @@ let novaSenha = '';
 
 sizePassword.innerHTML = sliderElement.value;
 
-sliderElement.oninput = function(){
+slider.oninput = function(){
     sizePassword.innerHTML = this.value;
 }
 
@@ -26,7 +26,7 @@ function generatePassword() {
     novaSenha = pass;
 }
 
-function copyPassword(){
-    alert("Senha copiada com sucesso!")
-    navigator.clipboard.writeText(novaSenha);
+    async function copyPassword(){
+    await navigator.clipboard.writeText(novaSenha);
+    alert("Senha copiada com sucesso ! ");
 }
